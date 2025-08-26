@@ -42,8 +42,7 @@ def remove_suffix_ness(word):
         upd_word = word.rstrip('ness')
         if upd_word[-1] == 'i':
             return upd_word[:-1] + 'y'
-        else:
-            return upd_word
+        return upd_word
     return word
 
 
@@ -60,7 +59,6 @@ def adjective_to_verb(sentence, index):
     tokens = sentence.split()
     if len(tokens) > abs(index):
         if tokens[index].endswith('.'):
-            return tokens[index][:-1] + "en"
-        return tokens[index] + "en"
-    else:
-        return ""
+            return tokens[index][:-1] + 'en'
+        return tokens[index] + 'en'
+    return ''
