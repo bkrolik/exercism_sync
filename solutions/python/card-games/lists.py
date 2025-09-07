@@ -22,9 +22,9 @@ def concatenate_rounds(rounds_1, rounds_2):
     :return: list - all rounds played.
     """
     union = rounds_1
-    for round in rounds_2:
-        if round not in rounds_1:
-            union.append(round)
+    for _round in rounds_2:
+        if _round not in rounds_1:
+            union.append(_round)
     return union
 
 
